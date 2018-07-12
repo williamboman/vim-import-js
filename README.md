@@ -1,7 +1,7 @@
 ImportJS helps you import JavaScript dependencies. Hit a keyboard shortcut
 to automatically add `import x from 'y'` statements at the top of the file.
 
-![Demo of ImportJS in action](https://raw.github.com/galooshi/vim-import-js/master/demo.gif)
+![Demo of ImportJS in action](https://raw.github.com/williamboman/vim-import-ts/master/demo.gif)
 
 
 # Installation
@@ -9,7 +9,7 @@ to automatically add `import x from 'y'` statements at the top of the file.
 ImportJS is meant to be used as a Pathogen plugin. Just `git clone` this repo
 into the `bundles` folder and you are good to go!
 ```
-git clone git@github.com:Galooshi/vim-import-js.git ~/.vim/bundle/vim-import-js
+git clone git@github.com:williamboman/vim-import-ts.git ~/.vim/bundle/vim-import-js
 ```
 
 ## Dependencies
@@ -17,10 +17,10 @@ git clone git@github.com:Galooshi/vim-import-js.git ~/.vim/bundle/vim-import-js
 ImportJS works in [Vim](http://www.vim.org/) (version 8 and later) and
 [Neovim](https://neovim.io/).
 
-You need import-js installed globally to use this plugin.
+You need import-ts installed globally to use this plugin.
 
 ```sh
-npm install -g import-js
+npm install -g import-ts
 ```
 
 ## Default mappings

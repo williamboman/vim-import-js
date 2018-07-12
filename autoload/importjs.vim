@@ -22,7 +22,7 @@ endfunction
 " we get a non-empty response or hit the max number of tries.
 function importjs#TryExecPayload(payload, tryCount)
   if (a:tryCount > 3)
-    echoerr "No response from `importjs` after " . a:tryCount . " tries"
+    echoerr "No response from `importts` after " . a:tryCount . " tries"
     return
   endif
 
@@ -36,7 +36,7 @@ function importjs#TryExecPayload(payload, tryCount)
   if exists("*jobsend")
     " Problem starting with importjs process
     if s:job == -1
-      echoerr "importjs daemon process not running"
+      echoerr "importts daemon process not running"
       return ""
     endif
 
@@ -71,7 +71,7 @@ function importjs#ExecCommand(command, arg, ...)
     let resultString = importjs#TryExecPayload(payload, 0)
   catch /E906:/
     " channel not open
-    echoerr "importjs process not running"
+    echoerr "importts process not running"
     return
   endtry
 
@@ -193,7 +193,7 @@ endfun
 
 function! importjs#JobExit(job, exitstatus)
   if (a:exitstatus == 127)
-    echoerr "importjs command not found. Run `npm install import-js` to get it."
+    echoerr "importts command not found. Run `npm install import-ts` to get it."
     echoerr ""
   endif
 endfun
@@ -253,9 +253,9 @@ function! importjs#Init()
   " useful.
 
   if has('win32') || has('win64')
-    let s:job_executable='importjs.cmd'
+    let s:job_executable='importts.cmd'
   else
-    let s:job_executable='importjs'
+    let s:job_executable='importts'
   endif
 
   if exists("*jobstart")
